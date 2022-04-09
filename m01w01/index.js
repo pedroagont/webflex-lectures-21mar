@@ -1,12 +1,12 @@
 // PROBLEM:
 // Write a node program that takes in an unlimited number of command line arguments
 // and prints out the sum of them.
-// If any argument is not a number, skip it.
+// If any argument is not a whole number, skip it.
 // Do not support negative numbers though.
 
-// NOTES
-// We need an array to store the passed values/arguments
+// GROUP NOTES
 // We need to access command line arguments (process.argv ?)
+// We need an array to store the passed values/arguments
 // We need a for loop / iterator to properly sum each passed value/arguments
 // We need conditional statements to validate number data types and negative values
 // STRETCH: We could create a function to invoke it with different arrays if needed
@@ -32,11 +32,11 @@ const sumAllNumbersInArray = function(array){
   let total = 0;
 
   for (const element of array) {
-    const number = Number(element)
-    const absolute = Math.abs(number)
+    const converted = Number(element);
     
-    if(absolute > 0) {
-      total = total + absolute
+    if(converted > 0 && Number.isInteger(converted)) {
+      // total = total + converted;
+      total += converted;
     }
   }
 
@@ -44,4 +44,5 @@ const sumAllNumbersInArray = function(array){
 }
 
 const commandLineArgs = process.argv
-console.log(sumAllNumbersInArray(commandLineArgs))
+
+console.log('🧮 RESULT: ', sumAllNumbersInArray(commandLineArgs));
