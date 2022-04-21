@@ -1,7 +1,6 @@
 # W02D04 - Promises
 
 ### To Do
-
 - [ ] Why Promises? Callback hell problem
 - [ ] Introduction to Promises
 - [ ] Creating our own Promises

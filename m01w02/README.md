@@ -1,4 +1,4 @@
-# Breakout Session: Callbacks
+# M01W02 - Callbacks
 - [ ] Real world scenario
 - [ ] Sync vs Async: What is a callback?
 - [ ] How NodeJS works?
