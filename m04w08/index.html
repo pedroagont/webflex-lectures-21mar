@@ -7,7 +7,16 @@
     <title>Client Side JavaScript & jQuery 💻</title>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./layout.css" />
+    <link rel="stylesheet" href="./header.css" />
+    <link rel="stylesheet" href="./main.css" />
+
+    <!-- External JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Custom JS -->
     <script defer src="./app.js" charset="utf-8"></script>
@@ -18,5 +27,14 @@
       <h1 class="header-title">Hi from the Browser!</h1>
       <span class="header-emojis">👋🌎🐢</span>
     </header>
+
+    <main class="main">
+      <form>
+        <input id="main-input" type="text" placeholder="" />
+        <button id="main-button">Click me!</button>
+      </form>
+      <span id="main-error-msg"></span>
+      <p id="main-output">This will change with your input! 📲</p>
+    </main>
   </body>
 </html>

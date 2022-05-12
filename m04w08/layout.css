@@ -1,0 +1,13 @@
+/* selector {
+  property: value
+} */
+
+body {
+  font-family: sans-serif;
+  background-color: tomato;
+  color: white;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

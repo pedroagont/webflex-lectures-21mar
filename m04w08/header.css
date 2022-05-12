@@ -1,17 +1,8 @@
-/* selector {
-  property: value
-} */
-
-body {
-  font-family: sans-serif;
-  background-color: tomato;
-  color: white;
-}
-
 .header {
   background: black;
   display: flex;
   justify-content: space-between;
+  padding: 1em;
 }
 
 .header-title {
