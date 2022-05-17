@@ -1,11 +1,16 @@
 # W02D04 - Promises
 
 ### To Do
+
 - [ ] Why Promises? Callback hell problem
 - [ ] Introduction to Promises
 - [ ] Creating our own Promises
 - [ ] Error handling with Promises (vs callbacks)
 - [ ] Parallelizing async things (Promise.all)
+
+### Video
+
+[https://vimeo.com/701819669/dd9075095e](https://vimeo.com/701819669/dd9075095e)
 
 ### Why Promises? Callback hell problem
 
@@ -119,22 +124,19 @@ functionOneReturningPromise()
 - `Promise.race`: Waits for **any** of the promises to resolve/reject
 
 ```js
-const promisesArray = [
-  fetchUserData,
-  fetchContentData,
-  fetchCommentsData
-];
+const promisesArray = [fetchUserData, fetchContentData, fetchCommentsData];
 
 // Promise.all waits for all of the promises to resolve/reject
 Promise.all(promisesArray)
-  .then(resultsArray => {    
+  .then(resultsArray => {
     // const userData = resultsArray[0];
     // const contentData = resultsArray[1];
     // const commentsData = resultsArray[2];
 
     const [userData, contentData, commentsData] = resultsArray;
     console.log('all results:', userData, contentData, commentsData);
-  }).catch(error => {
+  })
+  .catch(error => {
     console.error('error from any of the promises that rejects', error);
   });
 
