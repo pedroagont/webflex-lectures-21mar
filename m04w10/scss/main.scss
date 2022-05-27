@@ -1,0 +1,18 @@
+/* MAIN STYLES */
+.main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.main-title {
+  text-align: center;
+  padding-top: 0.5em;
+  font-size: 2em;
+  font-family: 'Lobster', cursive;
+}
+
+.destinations-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em 0;
+}

@@ -1,0 +1,80 @@
+/* NAVBAR STYLES */
+.navbar-top {
+  background: midnightblue;
+  padding: 1.5em;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  text-decoration: none;
+  font-family: 'Lobster', cursive;
+  color: white;
+  font-size: 1.5em;
+}
+
+.navbar-burger {
+  display: none;
+  color: white;
+  width: 20vw;
+}
+
+.navbar-menu {
+  list-style-type: none;
+  width: 70vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar-menu {
+  li {
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.navbar-menu {
+  li {
+    button {
+      background-color: transparent;
+      border: 1px solid white;
+      box-shadow: 1px 1px black;
+      padding: 1em;
+      background: midnightblue;
+      color: white;
+    }
+  }
+}
+
+.navbar-menu {
+  li {
+    button:hover {
+      box-shadow: 2px 2px black;
+    }
+  }
+}
+
+.navbar-menu {
+  li {
+    button:active {
+      transform: translate(2px, 1px);
+    }
+  }
+}
+
+.navbar-menu {
+  li:first-child {
+    font-weight: bold;
+    color: white !important;
+  }
+}

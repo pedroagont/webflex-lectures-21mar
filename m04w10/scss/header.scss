@@ -1,0 +1,43 @@
+/* HEADER STYLES */
+.header {
+  background: beige;
+  background-image: url('https://images.unsplash.com/photo-1524946274118-e7680e33ccc5?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  padding: 2em;
+  padding-top: 5em;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-title {
+  font-size: 4em;
+  font-family: 'Lobster', cursive;
+  text-shadow: 5px 5px white;
+}
+
+.header-subtitle {
+  font-style: italic;
+  text-shadow: 3px 3px white;
+}
+
+.header-cta {
+  padding: 1em;
+  background-color: transparent;
+  border: 2px solid black;
+  box-shadow: 1px 1px black;
+  font-weight: bold;
+  width: 33%;
+}
+
+.header-cta:hover {
+  box-shadow: 2px 2px black;
+}
+
+.header-cta:active {
+  transform: translate(2px, 1px);
+}

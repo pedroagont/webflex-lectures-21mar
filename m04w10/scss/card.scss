@@ -1,0 +1,44 @@
+/* CARD STYLES */
+.card {
+  border-radius: 20px;
+  background: dodgerblue;
+  color: white;
+  width: 25%;
+  margin: 1em auto;
+  padding: 1em;
+  text-align: center;
+}
+
+.card:hover {
+  box-shadow: 2px 2px black;
+  transform: translate(2px, 1px);
+}
+
+.card-title {
+  font-style: italic;
+  text-shadow: 1px 1px black;
+  font-size: 1.2em;
+  font-family: 'Lobster', cursive;
+}
+
+.card-text {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.card-button {
+  padding: 0.5em;
+  box-shadow: 1px 1px black;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  font-weight: bold;
+}
+
+.card-button:hover {
+  box-shadow: 2px 2px black;
+}
+
+.card-button:active {
+  transform: translate(2px, 1px);
+}
