@@ -7,9 +7,9 @@
 - [ ] Use AJAX to submit data to a remote server
 - [ ] All without refreshing the browser
 
-  ### Video
+### Video
 
-  [https://vimeo.com/710984581/82d265a108](https://vimeo.com/710984581/82d265a108)
+[https://vimeo.com/710984581/82d265a108](https://vimeo.com/710984581/82d265a108)
 
 ### AJAX
 
