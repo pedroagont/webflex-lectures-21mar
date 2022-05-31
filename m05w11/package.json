@@ -1,0 +1,24 @@
+{
+  "name": "w05d01-example",
+  "version": "1.0.0",
+  "description": "Lecture notes for W5D1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "node cleaner.js",
+    "all": "node cleaner.js && knex seed:run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "faker": "^4.1.0",
+    "knex-cleaner": "^1.3.0",
+    "knex-csv-seeder": "^0.4.1",
+    "moment": "^2.24.0",
+    "knex": "^0.21.1",
+    "objection": "^2.1.3",
+    "pg": "^8.0.3"
+  }
+}
