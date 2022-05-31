@@ -1,16 +1,3 @@
-# W05D01 - SQL Intro
-
-### To Do
-
-- [ ] Introduction to RDBMS
-- [ ] The Relational Data Model (Tables, Columns, Rows)
-- [ ] `SELECT` Statements
-- [ ] Filtering and ordering
-- [ ] Joining tables
-- [ ] Grouping records
-- [ ] Aggregation functions
-- [ ] `LIMIT` and `OFFSET`
-
 ### SELECT Challenges
 
 For the first 6 queries, we'll be using the `users` table.
@@ -20,6 +7,7 @@ For the first 6 queries, we'll be using the `users` table.
 1. List total number of users
 
 ```sql
+SELECT COUNT(id) FROM users;
 
 ```
 
