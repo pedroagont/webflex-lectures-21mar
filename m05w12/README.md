@@ -8,6 +8,10 @@
 - [ ] Serve database content to the browser
 - [ ] Protecting secrets with Environment Variables
 
+### Video
+
+[https://vimeo.com/718134150/6c1475fd2e](https://vimeo.com/718134150/6c1475fd2e)
+
 ### node-postgres
 
 We are going to use node-postgres (`pg`) node package to interact with our database.
