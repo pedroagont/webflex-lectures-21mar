@@ -28,21 +28,21 @@
 //   console.log(element, index)
 // })
 
-const sumAllNumbersInArray = function(array){
+const sumAllNumbersInArray = function(array) {
   let total = 0;
 
   for (const element of array) {
     const converted = Number(element);
-    
-    if(converted > 0 && Number.isInteger(converted)) {
+
+    if (converted > 0 && Number.isInteger(converted)) {
       // total = total + converted;
       total += converted;
     }
   }
 
   return total;
-}
+};
 
-const commandLineArgs = process.argv
+const commandLineArgs = process.argv;
 
 console.log('🧮 RESULT: ', sumAllNumbersInArray(commandLineArgs));
