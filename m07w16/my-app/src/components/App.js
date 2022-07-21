@@ -1,12 +1,37 @@
-import Card from './Card';
+
+import { useState } from 'react';
+import CardList from './CardList';
 import './App.css';
 
+const initialAppData = [
+  {
+    id: 1,
+    title: 'Ed',
+    description: 'This is Ed!',
+    color: 'royalblue',
+  },
+  {
+    id: 2,
+    title: 'Edd',
+    description: 'This is Edd!',
+    color: 'tomato',
+  },
+  {
+    id: 3,
+    title: 'Eddy',
+    description: 'This is Eddy!',
+    color: 'gold',
+  }
+]
+
 function App() {
+  // eslint-disable-next-line
+  const [appData, setAppData] = useState(initialAppData)
+  
   return (
     <>
       <h1>Hello from React! 👋⚛️</h1>
-      <Card title="Card 1" description="This is my first card ever!" color="royalblue"/>
-      <Card title="Card 2" description="This is my second card!" color="tomato" />
+      <CardList listData={appData}/>
     </>
   );
 }
