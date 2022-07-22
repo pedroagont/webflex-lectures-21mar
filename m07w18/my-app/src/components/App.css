@@ -1,0 +1,13 @@
+body {
+  background-color: bisque;
+  color: brown;
+  font-size: 1.5em;
+}
+
+.random-shibe-container {
+  max-width: 600px;
+}
+
+.random-shibe-container img {
+  width: 100%;
+}
