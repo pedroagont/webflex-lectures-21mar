@@ -1,16 +1,12 @@
 function Counter(props) {
-  // const { count, handleIncrement } = props;
-  const { count } = props;
-  
-  if(count === 0) {
-    return (<h2>Loading shibes... 😎</h2>)
-  }
+  const { count, handleDecrement, handleIncrement } = props;
 
   return (
-    <>
-      <h2>Cute shibes count: { count } 🦮</h2>
-      {/*<button onClick={handleIncrement}>Increment!</button>*/}
-    </>
+    <div className="counter-container">
+      <button onClick={handleDecrement}>Decrement 🔽</button>
+      <h2>Count: { count } 🔄</h2>
+      <button onClick={handleIncrement}>Increment 🔼</button>
+    </div>
   );
 }
 

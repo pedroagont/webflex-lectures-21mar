@@ -7,13 +7,13 @@ import RandomShibePic from './RandomShibePic';
 import './App.css';
 
 function App() {
-  const { count, handleIncrement } = useCounter();
-  const { result } = useShibe({ handleIncrement });
+  const { count, handleDecrement, handleIncrement } = useCounter();
+  const { result } = useShibe();
   
   return (
     <>
       <h1>Hi everyone! 👋</h1>
-      <Counter count={count} handleIncrement={handleIncrement} />
+      <Counter count={count} handleDecrement={handleDecrement} handleIncrement={handleIncrement} />
       <RandomShibePic result={result} />
     </>
   );

@@ -12,7 +12,3 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
-#root * {
-  margin: 0.5em;
-}
