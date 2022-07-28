@@ -1,4 +1,4 @@
-# M07W16 - React Fundamentals
+# M07W17 - Component Based UI with React
 
 ### To Do
 
