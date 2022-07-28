@@ -1,9 +1,7 @@
-
-import { useState } from 'react';
 import CardList from './CardList';
 import './App.css';
 
-const initialAppData = [
+const appData = [
   {
     id: 1,
     title: 'Ed',
@@ -25,9 +23,6 @@ const initialAppData = [
 ]
 
 function App() {
-  // eslint-disable-next-line
-  const [appData, setAppData] = useState(initialAppData)
-  
   return (
     <>
       <h1>Hello from React! 👋⚛️</h1>
