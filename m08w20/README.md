@@ -7,6 +7,10 @@
 - [ ] `debug()` and `prettyDOM()`
 - [ ] Mocking AJAX Requests and Functions
 
+### Video
+
+[https://vimeo.com/736004367/db7b41b39a](https://vimeo.com/736004367/db7b41b39a)
+
 ### Setup & Teardown
 - Tests should represent how a user (or other code) would interact with our application
 - It's important to properly setup the test conditions to isolate the piece of functionality under test

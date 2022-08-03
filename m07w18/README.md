@@ -9,6 +9,10 @@
 - [ ] Dependencies
 - [ ] _useEffect_ Flow
 
+### Video
+
+[https://vimeo.com/734272254/775bb9c6f7](https://vimeo.com/734272254/775bb9c6f7)
+
 ### Two Rules for Hooks
 
 1. Don't call Hooks inside loops, conditions, or nested functions. **Always use Hooks at the top level of your React functions.**
