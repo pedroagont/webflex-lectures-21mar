@@ -9,7 +9,6 @@ const routes = require('./routes');
 
 // ----------------------- SETUP AND MIDDLEWARES
 db.connect();
-
 const app = express();
 
 app.use(helmet()); // includes security headers (owasp)
@@ -26,6 +25,7 @@ app.use(
   })
 );
 
+// ----------------------- ROUTES / ENDPOINTS
 app.use('/', routes);
 
 module.exports = app;

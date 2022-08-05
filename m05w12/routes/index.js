@@ -6,8 +6,7 @@ const FruitsRoutes = require('./FruitsRoutes');
 
 const router = express.Router();
 
-// ----------------------- ROUTES / ENDPOINTS
-// RENDERED ROUTES
+// RENDERING ROUTES
 router.use('/', IndexRoutes);
 
 // AUTHENTICATION ROUTES
