@@ -1,0 +1,70 @@
+body {
+  text-align: center;
+}
+
+.navbar {
+  padding: 1em;
+  margin: 0;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar.dark {
+  background-color: darkblue;
+  color: white;
+}
+
+.navbar.light {
+  background-color: royalblue;
+  color: white;
+}
+
+.navbar-menu {
+  width: 70vw;
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar-menu li {
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar-menu li a {
+  color: white;
+}
+
+button.theme-toggler {
+  padding: 0.5em;
+  font-size: 0.5em;
+  background: transparent;
+  color: white;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+
+.wrapper.dark {
+  background-color: royalblue;
+  color: white;
+}
+
+.wrapper.light {
+  background-color: white;
+  color: royalblue;
+}
