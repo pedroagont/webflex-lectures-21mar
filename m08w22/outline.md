@@ -1,31 +1,57 @@
-# M08w22 - Intro to Ruby
+## Outline
 
-### To Do
-* [ ] Ruby Intro
-* [ ] Variables
-* [ ] Conditionals
-* [ ] Loops
-* [ ] Methods
-* [ ] Hashes
-* [ ] Blocks and Lambdas
-* [ ] Classes
+### Why Ruby/Rails week?
+- more like the real world
+- you get an existing codebase and have to make updates to it
+- it might be unfamiliar
+- you just need to know what is necessary to get the project done and not become a master of Ruby
+- seek breadth not depth
+- you will feel overwhelmed by the new language/environment
+
+### LSD
+* Logic, Syntax, Data
+* The Logic and Data are still the same
+* It's the syntax that's different
+
+### Ruby Intro
+- We recommend using RVM (Ruby Version Manager) as multiple versions are sometimes necessary
+- Ruby is an idiomatic language
+  - Using a language in the way that it is meant to be used to solve the problem
+- Ruby was meant to be fun and easy to write/read
+- Ruby is synchronous (so no need for callbacks/promises)
+- Holding onto 10th most popular programming language in the world
+
+### Ruby Basics
+- Ruby files end in `.rb`
+- Run your files with `$ ruby file.rb`
+- Variables are `snake_case`
+
+```bash
+$ touch 01_variables.rb
+$ ruby 01_variables.rb
+```
+
+## `01_variables.rb`
 
 ### Comments and Printing to Standard Out
-
-```rb
-# single line comment
-
-=begin
-multi-line
-comment
-=end
-```
 
 ```rb
 # print something to the console
 print "something" # no new line
 puts "something else" # new line
 p "also works" # returns the value printed
+
+# put a blank line in the console
+puts "I need space"
+puts
+puts "no problem"
+
+# single line comment
+
+=begin
+multi-line
+comment
+=end
 ```
 
 ### Variables
@@ -76,6 +102,8 @@ puts "#{first_name} #{last_name}"
 puts '#{first_name} #{last_name}'
 ```
 
+## `02_conditionals.rb`
+
 ### Conditionals
 
 ```rb
@@ -103,23 +131,36 @@ else
   puts "you chose well"
 end
 
-# single line if statement
+# reverse if!
 hour = 7
 puts "good evening" if hour > 5 # outputs string
-
-# also works with unless
 sunny = false
 puts "wear rain jacket" unless sunny # outputs string
 
+# our good friend the switch... I mean case statement
+last_name = "Chewie"
+case last_name
+  when "Stamos"
+    puts "hello there"
+    exit # === break
+  when "Kenobi"
+    puts "this is not the code you're looking for"
+    exit
+  else
+    puts "you are seeing the default message"
+end
+
 # ternary
 num = 7
-puts num < 10 ? "single digits" : "multiple digits"
+puts (num < 10) ? "single digits" : "multiple digits"
 ```
+
+## `03_loops.rb`
 
 ### Loops
 
 ```rb
-# loop
+# break
 i = 0
 loop do
   i += 1
@@ -144,7 +185,7 @@ until i > 5 do # prints 1 through 6
 end
 
 # for..in === for..of ¯\_(ツ)_/¯
-names = ['Alice', 'Bob', 'Carol', 'Dean']
+names = ['Alice', 'Bob', 'Carol', 'David']
 for name in names do
   puts "Hello #{name}!"
 end
@@ -169,12 +210,20 @@ end
 10.times { puts "hello world" }
 ```
 
+## `04_methods.rb`
+
 ### Methods
 - Ruby uses implicit return, returning the last line of code in the method if there is no explicit `return`
-- Methods are not first-class citizens in Ruby as they are in JS (eg. we cannot pass them around as callbacks)
-- Special methods end in `?` or `!`
-  - `?` methods return a boolean value
+- Methods are not first-class citizens in Ruby as they are in JS
+- We cannot pass them around as callbacks (for instance)
+
+- even mathematical operators (+, -, etc) are methods
+- 2 + 3 is equivalent to add(2, 3) or add 2, 3 (infix operator)
+
+- special methods end in ? or !
+  - `?` methods return a boolean value (like isActive in JS)
   - `!` methods perform some kind of mutation
+  - Hungarian notation again!
 
 ```rb
 # writing our own methods
@@ -205,11 +254,13 @@ change_it(num)
 puts num # 10
 ```
 
+## `05_hashes.rb`
+
 ### Hashes
-* Hashes are collections of key/value pairs in Ruby (similar to objects in JS)
 
 ```rb
-# hash creation
+# hashes
+# associative array... a way of storing key/value pairs
 user = {
   "username" => "johns",
   "password" => "1234",
@@ -219,7 +270,9 @@ puts user
 # access properties with square brackets
 puts user["logged_in"] # false
 
-# symbols are often used as keys for hashes
+# symbols
+# "a string that you can't change"
+# perfect as keys for hashes
 user = {
   :username => "adal",
   :password => "5678",
@@ -242,11 +295,13 @@ user[my_key] # nil
 user[my_key.to_sym] # 'bobh'
 ```
 
+## `06_lambdas.rb`
+
 ### Blocks and Lambdas
-* Blocks define a chuck of code to be executed
-* They can be defined with do..end or {}
 
 ```rb
+# blocks define a chunk of code to be executed
+# can be do..end or {}
 dogs = ["Odie", "Lassie", "Dioji"]
 
 dogs.each do |dog|
@@ -258,13 +313,9 @@ dogs.each { |dog|
   # also inside a block
   puts dog
 }
-```
 
-* Lambdas are blocks stored in memory
-* This functionality is similar to how callbacks work in JS
-
-```rb
-# lambda creation
+# lambdas
+# "named blocks"
 do_thing = lambda { |dog| puts dog } # lambda keyword
 say_something = -> { puts "I'm giving up on you" } # lambda literal
 
@@ -275,23 +326,24 @@ dogs.each &do_thing
 def my_method(&block)
   block.call # .call to invoke the block
 end
-
-# invoke the method and pass the stored lambda
 my_method &say_something # w/o parens
 my_method(&say_something) # w/ parens
 ```
 
+## `07_classes.rb`
+
 ### Classes
-* You declare a class in Ruby with the class keyword.
+
+* Declare a class in Ruby with the class keyword.
 
 ```Ruby
 class Car
 end
 ```
 
-#### Initialize
-* `initialize` is a special method in classes that is called when a class object is created with .new
-* `initialize` methods are used to set the initial state of an object.
+#### __Initialize__
+* Initialize is a special method in classes that is called when a class object is created with .new
+* Initialize methods are used to set the initial state of an object.
 
 ```Ruby
 class Car
@@ -305,10 +357,10 @@ end
 my_car = Car.new("red", 2007, "matrix")
 ```
 
-#### Accesor && Readers
+#### __Accesor && Readers__
 * You can set default read and write methods for instance variables with accessor and readers.
 
-```Ruby
+```rb
 class Car
  attr_accessor :color
  attr_reader :year
@@ -319,32 +371,94 @@ class Car
    @model = model
  end
 end
-```
 
-Same as
-
-```Ruby
+# equivalent to
 class Car
  def initialize (color, year, model)
    @color = color
    @year = year
    @model = model
  end
-
  def color
    @color
  end
-
  def color=(value)
    @color = value
  end
-
  def year
    @year
  end
-
  def model=(value)
    @model = value
  end
 end
+```
+
+## Bonus (time allowing)
+
+### Imports
+
+```rb
+# load ruby code from another file
+load "ruby2.rb"
+```
+
+### Gems
+
+* [rubygems.org](https://rubygems.org/)
+* `bundle init` creates a Gemfile, equivalent to `npm init -y`
+* __Gemfile:__ a file that works with bundler to track and load a list of dependencies
+
+```rb
+# bundle init
+# bundle add rainbow
+
+# external packages are required; not loaded
+require 'rainbow'
+
+this = Rainbow('this').red
+is = Rainbow('is').green
+neat = Rainbow('neat').orange
+
+puts this + " " + is + " " + neat
+puts "#{this} #{is} #{neat}"
+```
+
+### Errors
+
+```rb
+# you can raise an exception (a form of error)
+raise "whoa error"
+
+=begin
+Traceback (most recent call last):
+ruby.rb:305:in `<main>': whoa error (RuntimeError)
+=end
+```
+
+### String Methods
+
+```rb
+first_name = 'John'
+
+puts first_name # "John"
+puts first_name.size # 4
+puts first_name.include?("Joh") # true
+puts first_name.index("h") # 2
+puts first_name.upcase # JOHN
+puts first_name.downcase # john
+
+ruby_creator = "Yukihiro Matsumoto"
+puts ruby_creator.split(' ').class # array
+
+# methods ending in ? return a boolean
+puts ruby_creator.nil? # false
+puts ruby_creator.start_with?("Yuki") # true
+
+# methods ending in ! modify an object in place
+puts ruby_creator # "Yukihiro Matsumoto"
+ruby_creator.downcase
+puts ruby_creator # "Yukihiro Matsumoto"
+ruby_creator.downcase!
+puts ruby_creator # "yukihiro matsumoto"
 ```
