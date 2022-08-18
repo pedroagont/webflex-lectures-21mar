@@ -1,4 +1,4 @@
-# M08w22 - Intro to Ruby
+# M09w22 - Intro to Ruby
 
 ### To Do
 * [ ] Ruby Intro
