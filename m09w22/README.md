@@ -10,6 +10,10 @@
 * [ ] Blocks and Lambdas
 * [ ] Classes
 
+### Video
+
+[https://vimeo.com/740708885/e5f26a475d](https://vimeo.com/740708885/e5f26a475d)
+
 ### Comments and Printing to Standard Out
 
 ```rb
