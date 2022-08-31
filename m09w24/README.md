@@ -7,6 +7,10 @@
 - [ ] Quickly build simple Rails app
 - [ ] Nested Resources
 
+### Video
+
+[https://vimeo.com/745126538/fb19ca7192](https://vimeo.com/745126538/fb19ca7192)
+
 ### Model View Controller Review
 
 - **Model:** Responsible for handling data logic (eg. database queries)
