@@ -4,15 +4,24 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   
-  resources :authors
+  resources :authors do
+    resources :books
+  end
 
-  resources :authors, only: [:show, :index]
-  resources :authors, except: [:edit, :update, :show]
+  # Using namespaces /admin/articles
+  # rails g controller admin/articles
+  namespace :admin do
+    resources :articles, :comments
+  end
 
-  resources :books
+  # Shallow nesting
+  resources :articles do
+    resources :comments, only: [:index, :new, :create]
+  end
+  resources :comments, only: [:show, :edit, :update, :destroy]
 
-  # singular resources
-  get 'profile', to: 'users#show'
-
-  get 'profile', action: :show, controller: 'users'
+  # Using the :shallow option
+  resources :articles do
+    resources :comments, shallow: true
+  end
 end

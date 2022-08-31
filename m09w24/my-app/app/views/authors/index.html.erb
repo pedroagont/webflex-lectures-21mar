@@ -2,9 +2,9 @@
 <% @authors.each do |author| %>
   <ul>
     <li>
-      <h3>
-        <%= "#{author.first_name} #{author.last_name}" %>
-      </h3>
+      <h2>
+        <%= "#{author.first_name} #{author.last_name}" %> - <%= link_to 'Books', author_books_path(author)  %>
+      </h2>
     </li>
   </ul>
 <% end %>

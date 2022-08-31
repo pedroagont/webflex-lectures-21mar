@@ -1,4 +1,5 @@
-<h1>All the Books</h1>
+<h1>Books for <%= @author.first_name + ' ' + @author.last_name %></h1>
+<%= link_to 'Home', authors_path  %>
 <% @books.each do |book| %>
   <!-- <%= render 'book', book: book %> -->
   <%= render @books %>
